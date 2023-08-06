@@ -10,7 +10,7 @@ module TestGuru
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-    config.time_zone = 'Tomsk'
+    config.time_zone = 'Novosibirsk'
 
     config.i18n.available_locales = :en
 
