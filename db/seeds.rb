@@ -19,9 +19,9 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Ruby', level: 1, category: categories[0] },
-  { title: 'Git', level: 1, category: categories[0] },
-  { title: 'OOP', level: 1, category: categories[0] }
+  { title: 'Ruby', level: 0, category: categories[0] },
+  { title: 'Git', level: 0, category: categories[0] },
+  { title: 'OOP', level: 0, category: categories[0] }
 ])
 
 questions = Question.create!([
@@ -52,4 +52,10 @@ Answer.create!([
   { body: 'Cокращённое именование 4 базовых операций при работе с ресурсами. С-Create, R-Read, U-Update, D-Delete', correct: true, question: questions[5] },
   { body: 'Cокращённое именование 4 базовых операций при работе с ресурсами. С-Create, R-Read, U-Update, D-Download', correct: false, question: questions[5] },
   { body: 'Cокращённое именование 4 базовых операций при работе с ресурсами. С-Change, R-Read, U-Update, D-Download', correct: false, question: questions[5] }
+])
+
+user_tests = UserTest.create!([
+  { test: tests[0], user: users[1] },
+  { test: tests[1], user: users[1] },
+  { test: tests[2], user: users[2] }
 ])
