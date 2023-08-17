@@ -20,8 +20,8 @@ categories = Category.create!([
 
 tests = Test.create!([
   { title: 'Ruby', level: 0, category: categories[0] },
-  { title: 'Git', level: 0, category: categories[0] },
-  { title: 'OOP', level: 0, category: categories[0] }
+  { title: 'Git', level: 1, category: categories[0] },
+  { title: 'OOP', level: 2, category: categories[0] }
 ])
 
 questions = Question.create!([
