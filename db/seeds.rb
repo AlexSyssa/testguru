@@ -1,10 +1,5 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create!([
   { name: 'Alex' },
@@ -19,9 +14,9 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Ruby', level: 0, category: categories[0] },
-  { title: 'Git', level: 1, category: categories[0] },
-  { title: 'OOP', level: 2, category: categories[0] }
+  { title: 'Ruby', level: 0, category: categories[0], author: users[0] },
+  { title: 'Git', level: 1, category: categories[0], author: users[1]},
+  { title: 'OOP', level: 2, category: categories[1], author: users[2] }
 ])
 
 questions = Question.create!([
@@ -54,8 +49,10 @@ Answer.create!([
   { body: 'Cокращённое именование 4 базовых операций при работе с ресурсами. С-Change, R-Read, U-Update, D-Download', correct: false, question: questions[5] }
 ])
 
-user_tests = UserTest.create!([
+tests_users = TestsUser.create!([
+  { test: tests[0], user: users[0] },
   { test: tests[0], user: users[1] },
   { test: tests[1], user: users[1] },
+  { test: tests[2], user: users[1] },
   { test: tests[2], user: users[2] }
 ])
