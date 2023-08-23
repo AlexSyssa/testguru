@@ -6,9 +6,17 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
 
-  def self.sort_by_category(category_title)
-    joins(:category)
-    .where(categories: { title: category_title })
-    .order(title: :desc).pluck(:title)
+  validates :title, presence: true, uniqueness: { scope: :level}
+  validates :level, numericality: { only_integer: true, greater_then_or_equal_to: 1 }
+
+  scope :easy_level, -> { where(level: 0..1).order(created_at: :desc) }
+  scope :medium_level, -> { where(level: 2..4).order(created_at: :desc) }
+  scope :hard_level, -> { where(level: 5..Float::INFINITY).order(created_at: :desc) }
+  scope :by_category, ->(category) {joins(:category).where(categories: { title: category }) }
+
+  def self.sort_by_category(category)
+    by_category.pluck(:title).order(title: :desc)
   end
+
+
 end
