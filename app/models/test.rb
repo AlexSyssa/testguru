@@ -9,14 +9,9 @@ class Test < ApplicationRecord
   validates :title, presence: true, uniqueness: { scope: :level}
   validates :level, numericality: { only_integer: true, greater_then_or_equal_to: 1 }
 
-  scope :easy_level, -> { where(level: 0..1).order(created_at: :desc) }
-  scope :medium_level, -> { where(level: 2..4).order(created_at: :desc) }
-  scope :hard_level, -> { where(level: 5..Float::INFINITY).order(created_at: :desc) }
+  scope :easy_level, -> { where(level: 0..1) }
+  scope :medium_level, -> { where(level: 2..4) }
+  scope :hard_level, -> { where(level: 5..Float::INFINITY) }
   scope :by_category, ->(category) {joins(:category).where(categories: { title: category }) }
-
-  def self.sort_by_category(category)
-    by_category.pluck(:title).order(title: :desc)
-  end
-
 
 end

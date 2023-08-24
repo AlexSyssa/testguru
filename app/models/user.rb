@@ -7,9 +7,7 @@ has_many :created_tests, class_name: 'Test', foreign_key: :author_id
 
 validates :email, presence: true
 
-scope :by_test, -> (level) { tests.where(level: level).order(created_at: :asc) }
-
-  def by_level(level)
+def by_level(level)
     tests.where(level: level)
    .order(created_at: :asc)
   end
