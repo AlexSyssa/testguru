@@ -1,11 +1,16 @@
 {
-  "name": "test-guru",
-  "private": true,
-  "dependencies": {
-    "@rails/ujs": "^6.0.0",
-    "turbolinks": "^5.2.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/actioncable": "^6.0.0"
+  "name": "testguru",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:AlexSyssa/testguru.git",
+  "author": "AlexSyssa <lifeloverunn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack --mode development"
   },
-  "version": "0.1.0"
+  "devDependencies": {
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
