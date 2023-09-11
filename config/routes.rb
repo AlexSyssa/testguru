@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
  root to: 'tests#index'
-
 
  resources :tests
 
@@ -12,6 +10,15 @@ Rails.application.routes.draw do
    resources :questions, shallow: true
  end
 
- get '/tests', to: 'tests#index'
+ get '/show_question/:id', to: 'questions#show_question'
 
+# post '/questions/new/:id', to: 'questions#new'
+
+# get '/tests/:category/:title', to: 'tests#search', level: 2
+
+ resources :questions do
+   member do
+     post :new
+   end
+ end
 end
