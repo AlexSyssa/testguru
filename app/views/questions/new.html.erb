@@ -1,11 +1,7 @@
 <h1> Create new Question</h1>
-<form action="/questions" method="post">
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
-  <p>
-    <label for="question-body">Body:</label>
-    <input type="question" name="question[body]" id="question-body">
-  <p><br>
-
-  <input type="submit" value="Create"
-</form>
+<%= form_with url: test_questions_path, method: :post do |form| %>
+  <p><%= form.label :body, 'Body' %></p>
+  <p><%= form.text_area :body, rows: 4 %></p>
+  <p><%= form.submit 'Create' %></p>
+<% end %>

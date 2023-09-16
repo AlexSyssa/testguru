@@ -1,5 +1,5 @@
 class TestsController < ApplicationController
-  before_action :find_test
+  before_action :find_test, only: %i[show]
 
   def index
     result = ["Class: #{params.class}", "Parameters: #{params.inspect}"]
@@ -15,7 +15,11 @@ class TestsController < ApplicationController
 
   def create
     test = Test.create(test_params)
-    render plain: test.inspect
+    if @test.save
+      render inline: '<p>Test: <%= @test.title %>! was save </p>'
+    else
+      render html: '<h1> Test was not save </h1>'.html_safe
+    end
   end
 
   private
