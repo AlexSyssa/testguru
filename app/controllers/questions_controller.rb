@@ -1,26 +1,26 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index creste]
+  before_action :find_test, only: %i[index create]
   before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-#все вопросы конкретного теста
+
   def index
-    render json: find_test.questions
+    render json: @test.questions
   end
-#просмотр конкретного вопроса теста
+
   def show
-    render json: find_question
+    render json: @question
   end
 
   def destroy
-    find_question.destroy
+    @question.destroy
   end
 
   def new
   end
 
   def create
-    @question = find_test.questions.new(body: params.permit(:body))
+    @question = @test.questions.new(question_params)
     if @question.save
       render inline: '<p>Question: <%= @question.body %>! was save </p>'
     else
@@ -29,6 +29,10 @@ class QuestionsController < ApplicationController
   end
 
   private
+
+  def question_params
+    params.permit(:body)
+  end
 
   def find_test
     @test = Test.find(params[:test_id])
