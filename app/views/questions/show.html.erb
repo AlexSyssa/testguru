@@ -1,0 +1,16 @@
+<p class="mb-sm">
+  <strong>Body: </strong>
+  <%= @question.body %>
+</p>
+
+<p class="mb-sm">
+  <strong>Test_id: </strong>
+  <%= @question.test_id%>
+</p>
+
+<p><%= link_to 'Back', root_path %></p>
+
+<div class="mt">
+  <%= link_to fa_icon('pencil'), edit_question_path(@question), title: 'Edit question' %>
+  <%= link_to fa_icon('trash-o'), question_path(@question), method: :delete, title: 'Delete question' %>
+</div>
