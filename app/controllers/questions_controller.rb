@@ -1,37 +1,50 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index create]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[new index create]
+  before_action :find_question, only: %i[edit update show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render json: @test.questions
+    @questions = @test.questions
   end
 
   def show
-    render json: @question
   end
 
   def destroy
     @question.destroy
+
+    redirect_to tests_path
   end
 
   def new
+    @question = Question.new
   end
 
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      render inline: '<p>Question: <%= @question.body %>! was save </p>'
+      redirect_to @question
     else
       render html: '<h1> Question was not save </h1>'.html_safe
     end
   end
 
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
+    end
+  end
+
+  def edit
+  end
+
   private
 
   def question_params
-    params.permit(:body)
+    params.require(:question).permit(:body)
   end
 
   def find_test

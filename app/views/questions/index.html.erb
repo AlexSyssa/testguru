@@ -1,0 +1,14 @@
+<h1 class="title-lg" mb> Tricky Question</h1>
+
+  <p class="mt">
+    <%= link_to 'New question',  new_test_question_path %>
+  </p>
+
+<table border="2" cellspacing="5" bordercolor="#008080">
+  <tr>
+    <th> № </th>
+    <th>Body</th>
+    <th colspan ="3"> Actions </th>
+  </tr>
+  <%= render @questions %>
+</table>
