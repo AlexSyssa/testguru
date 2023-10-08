@@ -1,8 +1,4 @@
-<div class="container"
+  <h1> <%= question_header(@question) %></h1>
 
-  <h1 class="title-lg" mb> <%= question_header(@test) %></h1>
-
-  <p class="mb-lg"><%= render 'form' %></p>
-  <p class="mb-lg"><%= link_to 'Back', test_questions_path %></p>
-
-</div>
+  <p><%= render 'form' %></p>
+  <p><%= link_to 'Back', test_questions_path %></p>

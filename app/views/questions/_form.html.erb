@@ -1,16 +1,15 @@
 
 <%= form_with model: [@test, @question], local: true do |form| %>
 <%= render 'shared/errors', resource: @question %>
-<p class="mt-lg">
+<p>
   <%= form.label :body %><br>
   <%= form.text_area :body, id: :question_body, size: "80x10" %>
 </p>
 
-<p class="mb-lg">
+<p>
   <%= form.label :test_id %>
   <%= form.collection_select :test_id, Test.all, :id, :title, prompt: true %>
 </p>
 
-
-<p class="mb-lg"> <%= form.submit %></p>
+<p> <%= form.submit %></p>
 <% end %>

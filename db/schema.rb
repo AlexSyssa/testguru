@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(version: 2023_08_22_150048) do
+ActiveRecord::Schema.define(version: 2023_09_26_153232) do
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 2023_08_22_150048) do
     t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
+  create_table "test_passages", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "test_id", null: false
+    t.integer "current_question_id"
+    t.integer "correct_questions", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
+    t.index ["test_id"], name: "index_test_passages_on_test_id"
+    t.index ["user_id"], name: "index_test_passages_on_user_id"
+  end
+
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
     t.integer "level", default: 0, null: false
@@ -32,12 +44,6 @@ ActiveRecord::Schema.define(version: 2023_08_22_150048) do
     t.integer "author_id"
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
-  end
-
-  create_table "tests_users", id: false, force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "test_id", null: false
-    t.index ["user_id", "test_id"], name: "index_tests_users_on_user_id_and_test_id", unique: true
   end
 
   create_table "user_tests", force: :cascade do |t|
@@ -58,6 +64,9 @@ ActiveRecord::Schema.define(version: 2023_08_22_150048) do
 
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "tests"
+  add_foreign_key "test_passages", "questions", column: "current_question_id"
+  add_foreign_key "test_passages", "tests"
+  add_foreign_key "test_passages", "users"
   add_foreign_key "tests", "categories"
   add_foreign_key "tests", "users", column: "author_id"
   add_foreign_key "user_tests", "tests"
