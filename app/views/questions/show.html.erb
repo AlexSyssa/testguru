@@ -1,16 +1,19 @@
-<p class="mb-sm">
+<h1> <%= @question.test.title %> Question
+
+<p>
   <strong>Body: </strong>
   <%= @question.body %>
 </p>
 
-<p class="mb-sm">
-  <strong>Test_id: </strong>
-  <%= @question.test_id%>
+<h2> Answers </h2>
+
+<%= link_to 'New answer', new_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>
+
+<p><%= link_to 'Back', test_path(@question.test) %>
+   <%= link_to fa_icon('pencil'), edit_question_path(@question), title: 'Edit question' %>
+   <%= link_to fa_icon('trash-o'), question_path(@question), method: :delete, title: 'Delete question' %>
 </p>
-
-<p><%= link_to 'Back', root_path %></p>
-
-<div class="mt">
-  <%= link_to fa_icon('pencil'), edit_question_path(@question), title: 'Edit question' %>
-  <%= link_to fa_icon('trash-o'), question_path(@question), method: :delete, title: 'Delete question' %>
-</div>

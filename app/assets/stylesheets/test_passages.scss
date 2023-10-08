@@ -1,0 +1,10 @@
+
+.correct-persent {
+  &.success {
+    color: green;
+  }
+
+  &.fail {
+    color: red;
+  }
+}
