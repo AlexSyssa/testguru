@@ -8,10 +8,13 @@ module ApplicationHelper
     link_to repo, "https://github.com/#{author}/#{repo}", target: :blank
   end
 
-  def flash_massage(alert)
-    if flash[:alert]
-      content_tag :p, flash[:alert], class: 'flash alert'
+  def flash_message
+    content_tag :div, class: "flash" do
+      flash.map do |key, msg|
+        content_tag :div, class: "flash.#{key}" do
+          content_tag(:span, '&times;'.html_safe, class: :close) + msg
+        end
+      end.join().html_safe
     end
   end
-  
 end
