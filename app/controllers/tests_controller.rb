@@ -2,7 +2,6 @@ class TestsController < ApplicationController
 
   before_action :authenticate_user!, only: %i[edit update destroy start]
   before_action :find_test, only: %i[show edit update destroy start]
-  before_action :set_user, only: :start
 
   def index
     @tests = Test.all
@@ -37,7 +36,7 @@ class TestsController < ApplicationController
 
   def destroy
     @test.destroy
-    redirect_to tests_path
+    redirect_to tests_path, notice: 'Test deleted'
   end
 
   def start
@@ -49,10 +48,6 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
-  end
-
-  def set_user
-    @user = User.first
   end
 
   def test_params
