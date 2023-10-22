@@ -2,21 +2,20 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
 users = User.create!([
-  { name: 'Alex', email: 'Alex@gmail.com' },
-  { name: 'Ann', email: 'Ann@gmail.com' },
-  { name: 'Bill', email: 'Bill@gmail.com' }
+  { name: 'Alex', email: "Alx1@gmail.com", password: 'qwe1', password_confirmation: 'qwe1' },
+  { name: 'Ann', email: "n@gmail.com", password: 'asd2', password_confirmation: 'asd2' },
+  { name: 'Bill', email: "Bll1@gmail.com", password: 'zxc3', password_confirmation: 'zxc3' }
 ])
 
 categories = Category.create!([
-  { title: 'junior' },
-  { title: 'middle' },
-  { title: 'senior' }
+  { title: 'junior!' },
+  { title: 'middle!' },
+  { title: 'senior!' }
 ])
-
 tests = Test.create!([
-  { title: 'Ruby', level: 0, category: categories[0], author: users[0] },
-  { title: 'Git', level: 1, category: categories[0], author: users[1]},
-  { title: 'OOP', level: 2, category: categories[1], author: users[2] }
+  { title: 'Ruby!', level: 0, category: categories[0], author: users[0] },
+  { title: 'Git!', level: 1, category: categories[0], author: users[1]},
+  { title: 'OOP!', level: 2, category: categories[1], author: users[2] }
 ])
 
 questions = Question.create!([
@@ -47,12 +46,4 @@ Answer.create!([
   { body: 'Cокращённое именование 4 базовых операций при работе с ресурсами. С-Create, R-Read, U-Update, D-Delete', correct: true, question: questions[5] },
   { body: 'Cокращённое именование 4 базовых операций при работе с ресурсами. С-Create, R-Read, U-Update, D-Download', correct: false, question: questions[5] },
   { body: 'Cокращённое именование 4 базовых операций при работе с ресурсами. С-Change, R-Read, U-Update, D-Download', correct: false, question: questions[5] }
-])
-
-tests_users = TestsUser.create!([
-  { test: tests[0], user: users[0] },
-  { test: tests[0], user: users[1] },
-  { test: tests[1], user: users[1] },
-  { test: tests[2], user: users[1] },
-  { test: tests[2], user: users[2] }
 ])

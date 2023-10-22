@@ -12,9 +12,17 @@
 
   <body>
     <div class="wrapper">
-    <%= yield %>
-    </div>
+      <p><%=link_to 'Test Guru', root_path %></p>
+      <% if logged_in? %>
+      <p class="nav_user"> Welcome, <b><%= current_user.name %></b> Guru</p>
+      <p> <%= button_to 'Exit', session_path, method: :delete %></p>
+      <% else %>
+      <p class="navbar"> <%= link_to 'login', login_path %> </p>
+      <p class="navbar"> <%= link_to 'Check-in', signup_path %> </p>
+      <% end %>
 
-    <%= render 'shared/footer' %>
+      <%= yield %>
+    </div>
+  <%= render 'shared/footer' %>
   </body>
 </html>
