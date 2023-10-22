@@ -1,0 +1,9 @@
+<li>
+  <%= answer.body %><br>
+  <%= link_to 'Show', answer_path(answer) %> |
+  <%= link_to fa_icon('pencil'), edit_answer_path(answer) %> |
+  <%= link_to fa_icon('trash-o'),
+              answer_path(answer),
+              method: :delete,
+              data: { confirm: 'Are you sure?'} %>
+</li>
