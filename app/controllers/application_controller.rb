@@ -1,24 +1,25 @@
 class ApplicationController < ActionController::Base
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  after_action :hello_flash_message, only: :create, if: :devise_controller?
+
   protect_from_forgery with: :exception
 
-  helper_method :current_user,
-                :logged_in?
+  def default_url_options
+    { lang: I18n.locale == I18n.default_locale ? nil : I18n.locale }
+  end
 
   private
-  def authenticate_user!
-    unless current_user
-      redirect_to login_path, notice: 'Are you a Guru? Verifity your Email and Password, please'
-    end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name])
   end
 
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+  def after_sign_in_path_for(resource)
+    resource.is_a?(Admin)? admin_tests_path : root_path
   end
 
-
-  def logged_in?
-    current_user.present?
+  def hello_flash_message
+    flash[:notice] = "Hello, #{current_user.first_name}!" if current_user.present?
   end
-
 end
