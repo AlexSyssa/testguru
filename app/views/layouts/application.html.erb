@@ -12,13 +12,11 @@
 
   <body>
     <div class="wrapper">
+      <%= render 'shared/flash' %>
       <p><%=link_to 'Test Guru', root_path %></p>
-      <% if logged_in? %>
-      <p class="nav_user"> Welcome, <b><%= current_user.name %></b> Guru</p>
-      <p> <%= button_to 'Exit', session_path, method: :delete %></p>
-      <% else %>
-      <p class="navbar"> <%= link_to 'login', login_path %> </p>
-      <p class="navbar"> <%= link_to 'Check-in', signup_path %> </p>
+      <% if user_signed_in? %>
+      <p class="nav_user"> Welcome, <b><%= current_user.first_name %></b> Guru</p>
+      <p> <%= button_to 'Logout', destroy_user_session_path, method: :delete %></p>
       <% end %>
 
       <%= yield %>
