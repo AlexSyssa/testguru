@@ -25,6 +25,10 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.0'
 
+#Localization
+
+gem 'rails-i18n', '~> 6'
+
 gem 'pry-rails', '~> 0.3.4'
 
 # Use Active Storage variant
