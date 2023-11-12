@@ -1,5 +1,4 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
-
 en:
   devise:
     confirmations:
@@ -18,14 +17,23 @@ en:
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
+        welcome: "Добро пожаловать %{email}!"
+        confirm_account: "Confirm my account"
         subject: "Confirmation instructions"
+        confirm_your_account_email: "You can confirm your account email through the link below"
       reset_password_instructions:
+        hello: "Hello, %{email}"
         subject: "Reset password instructions"
       unlock_instructions:
+        hello: "Hello, %{email}"
         subject: "Unlock instructions"
       email_changed:
+        hello: "Hello, %{email}!"
         subject: "Email Changed"
+        email_is_being_changed: "We're contacting you to notify you that your email is being changed to %{email}"
+        email_has_been_changed: "We're contacting you to notify you that your email has been changed to %{email}"
       password_change:
+        hello: "Hello, %{email}"
         subject: "Password Changed"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
@@ -53,6 +61,7 @@ en:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"

@@ -1,0 +1,124 @@
+ru:
+  hello: "Привет мир!"
+
+  layouts:
+    application:
+      testguru: "ТестГуру"
+      welcome: "Добро пожаловать, %{name}!"
+      confirm: "Вы уверенны?"
+      logout: "Выйти"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      аnswer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+      user:
+        update: "Войти"
+        create: "Войти"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+        author_id: "Автор"
+      question:
+        body: "Текст вопроса"
+      answer:
+        body: "Текст ответа"
+        correct: "Правильный ответ"
+      # user:
+      #   first_name: "Имя"
+      #   last_name: "Фамилия"
+      #   email: "Email"
+      #   password: "пароль"
+      #   password_confirmation: "Подтверждение пароля"
+      #   remember_me: "Запомнить"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  devise:
+    registrations:
+      new:
+        header: "Регистрация"
+    sessions:
+      new:
+        header: "Вход в систему"
+    shared:
+      links:
+        sign_in: "Регистрация"
+        log_in: "Вход в систему"
+        forgot_your_password: "Забыли пароль?"
+        confirmation_instructions: "Не получил инструкций по подтверждению"
+        unlock_instructions: "Не получил инструкции по разблокировке"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      table:
+        title: "Название"
+        level: "Уровень"
+        question: "Вопросы"
+        action: "Действие"
+    test:
+      start_button: "Старт"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан."
+      update:
+        update: "Тест был успешно изменен."
+      destroy:
+        destroy: "Тест был успешно удален."
+      test:
+        show: "Просмотр"
+        edit: "Редактировать"
+        delete: "Удалить"
+      index:
+        header: "Доступные тесты"
+        new_test: "Создать новый тест"
+        table:
+          title: "Название"
+          level: "Уровень"
+          question: "Вопросы"
+          action: "Действие"
+      new:
+        header: "Создать новый тест"
+        back: "Назад"
+      edit:
+        header: "Редактирование теста:"
+        back: "Назад"
+      show:
+        header: "Название:"
+        level: "Уровень"
+        question: "Вопросы"
+        new_question: "Новый вопрос"
+        edit: "Редактирование"
+        back: "Назад"
+        delete: "Удалить"
+    nav:
+      admin_panel: "Панель Администратора"
+      welcome: "Добро пожаловать, %{name}!"
+      confirm: "Вы уверенны?"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"

@@ -1,33 +1,122 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  hello: "Hello world!"
+
+  layouts:
+    application:
+      testguru: "TestGuru"
+      welcome: "Welcome %{name}!"
+      confirm: "Are you sure?"
+      logout: "Logout"
+
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      answer:
+        create: "Create Answer"
+        update: "Update Answer"
+      user:
+        create: "Сохранить"
+        update: "Сохранить"
+
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+        author_id: "Author"
+      question:
+        body: "Body"
+      answer:
+        body: "Body"
+        correct: "Correct"
+      # user:
+      #   first_name: "Имя"
+      #   last_name: "Фамилия"
+      #   email: "Email"
+      #   password: "пароль"
+      #   password_confirmation: "Подтверждение пароля"
+      #   remember_me: "Запомнить"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  devise:
+    registrations:
+      new:
+        header: "Enter the Guru Gates"
+      sessions:
+        new:
+          header: "Log in"
+      shared:
+        links:
+          sign_in: "Sign in"
+          log_in: "Log in"
+          forgot_your_password: "Forgot your password?"
+          confirmation_instructions: "Didn't receive confirmation instructions"
+          unlock_instructions: "Didn't receive unlock instructions"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      table:
+        title: "Title"
+        level: "Lavel"
+        question: "Question"
+        action: "Action"
+    test:
+      start_button: "Start"
+
+  test_passages:
+    result:
+      header: "Test %{title} was succesfully completed!"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created."
+      update:
+        update: "Test was successfully updated."
+      destroy:
+        destroy: "Test was successfully deleted."
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      index:
+        header: "Tricky Tests"
+        new_test: "New test"
+        table:
+          title: "Title"
+          level: "Lavel"
+          question: "Question"
+          action: "Action"
+      new:
+        header: "Create new Test"
+        back: "Back"
+      edit:
+        header: "Edit test:"
+        back: "Back"
+      show:
+        header: "Название:"
+        level: "Уровень"
+        question: "Вопросы"
+        new_question: "Новый вопрос"
+        edit: "Редактирование"
+        back: "Назад"
+        delete: "Удалить"
+    nav:
+      admin_panel: "TestGuru Admin Panel"
+      welcome: "Welcome %{name}!"
+      confirm: "Are you sure?"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
