@@ -1,5 +1,12 @@
 <% if flash.present? %>
-  <%=flash.each do |key, message| %>
-    <%=content_tag :p, message, class: "flash #{key}"%>
+  <%=flash.each do |type, message| %>
+    <% if type = notice %>
+      <%= key = "success" %>
+    <% elsif type = alert %>
+      <%= key = "warning" %>
+    <% else %>
+      <%= key = type %>
+    <% end %>
+    <%=content_tag :p, message, class: "alert alert-#{key}"%>
   <% end %>
 <% end %>

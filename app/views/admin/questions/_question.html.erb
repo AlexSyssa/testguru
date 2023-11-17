@@ -2,5 +2,5 @@
   <%= question.body %>
   <%= link_to 'Show', admin_question_path(question) %> |
   <%= link_to fa_icon('pencil'), edit_admin_question_path(question), title: 'Edit question' %> |
-  <%= button_to 'Delete', admin_question_path(question), method: :delete, data: {confirm: 'Are you sure?'}%>
+  <%= link_to 'Delete', admin_question_path(question), method: :delete, data: {confirm: 'Are you sure?'}%>
 </li>

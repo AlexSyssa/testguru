@@ -2,7 +2,9 @@
 <html>
   <head>
     <title> <%=t('.testguru')%></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,17 +13,14 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <%= render 'shared/flash' %>
-      <% if user_signed_in? %>
-      <div class="nav nav-user">
-      <span class="nav-admin title"><%=link_to t('.testguru'), root_path %></span>
-      <div class="nav-admin user"> <%= t('.welcome', name: current_user.first_name)%>
-      <%= button_to t('.logout'), destroy_user_session_path, method: :delete, data: {confirm: t('.confirm')}%>
-      </div></div>
-      <% end %>
+    <div class="col col-md-4"> <%= render 'shared/nav' %></div>
 
-      <%= yield %>
+    <div class="container">
+      <%= render 'shared/flash' %>
+      <div class= "row justify-content-center mt-5"
+      <div class="col col-md-8">
+        <%= yield %>
+      </div>
     </div>
   <%= render 'shared/footer' %>
   </body>

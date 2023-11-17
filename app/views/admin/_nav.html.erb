@@ -1,8 +1,10 @@
-<div class="nav nav-admin">
-  <span class="nav-admin title"><%=t('.admin_panel')%></span>
-
-  <div class="nav-admin user">
-  <b class="nav-admin user-email"><%= t('.welcome', name: current_user.first_name) %></b>
-    <%= button_to 'Logout', destroy_user_session_path, method: :delete, data: {confirm: t('.confirm')}%>
+<nav class="navbar fixed-top bg-body-tertiary" style="background-color: #D8BFD8;">
+  <div class="container-fluid">
+  <%= t('.admin_panel')%> |
+  <span class="nav justify-content-end">
+    <%= t('.welcome', name: current_user.first_name) %>  |
+    <%= link_to t('.testguru'), admin_tests_path, class: 'nav-link active' %>
+    <%= button_to t('.logout'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
+  </span>
   </div>
-</div>
+</nav>
