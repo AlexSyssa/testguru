@@ -1,11 +1,14 @@
-<h1> <%= t('.header') %> </h1>
-
-<table border="2" cellspacing="5" bordercolor="#008080">
-  <tr>
-    <th><%= t('.table.title')%> </th>
-    <th><%= t('.table.level')%></th>
-    <th><%= t('.table.question')%></th>
-    <th><%= t('.table.action')%></th>
-  </tr>
-  <%= render @tests %>
-</table>
+<div class="row justify-content-center mt-3">
+  <div class="col-8 col—md—4">
+    <h1> <%= t('.header') %> </h1><br>
+     <table class="table table-bordered border-secondary">
+       <tr class="table-primary table-bordered border-secondary">
+       <th><%= t('.table.title')%> </th>
+       <th><%= t('.table.level')%></th>
+       <th><%= t('.table.question')%></th>
+       <th><%= t('.table.action')%></th>
+     </tr>
+     <%= render @tests %>
+    </table>
+  </div>
+</div>

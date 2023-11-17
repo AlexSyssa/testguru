@@ -1,13 +1,6 @@
 ru:
   hello: "Привет мир!"
 
-  layouts:
-    application:
-      testguru: "ТестГуру"
-      welcome: "Добро пожаловать, %{name}!"
-      confirm: "Вы уверенны?"
-      logout: "Выйти"
-
   helpers:
     submit:
       test:
@@ -49,6 +42,11 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      testguru: "ТестГуру"
+      welcome: "Добро пожаловать, %{name}!"
+      confirm: "Вы уверенны?"
+      logout: "Выйти"
 
   devise:
     registrations:
@@ -57,10 +55,11 @@ ru:
     sessions:
       new:
         header: "Вход в систему"
+      create:
+        hello: "Привет, %{name}"
+
     shared:
       links:
-        sign_in: "Регистрация"
-        log_in: "Вход в систему"
         forgot_your_password: "Забыли пароль?"
         confirmation_instructions: "Не получил инструкций по подтверждению"
         unlock_instructions: "Не получил инструкции по разблокировке"
@@ -118,6 +117,8 @@ ru:
       admin_panel: "Панель Администратора"
       welcome: "Добро пожаловать, %{name}!"
       confirm: "Вы уверенны?"
+      logout: "Выйти"
+      testguru: "ТестГуру"
 
   tests_mailer:
     completed_test:

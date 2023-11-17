@@ -31,6 +31,12 @@ gem 'rails-i18n', '~> 6'
 
 gem 'pry-rails', '~> 0.3.4'
 
+#UI
+
+gem 'jquery-rails'
+gem 'bootstrap', '~> 5.0.0.beta1'
+gem 'octicons_helper'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
