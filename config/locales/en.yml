@@ -1,13 +1,6 @@
 en:
   hello: "Hello world!"
 
-  layouts:
-    application:
-      testguru: "TestGuru"
-      welcome: "Welcome %{name}!"
-      confirm: "Are you sure?"
-      logout: "Logout"
-
   helpers:
     submit:
       test:
@@ -47,6 +40,11 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      testguru: "TestGuru"
+      welcome: "Welcome %{name}!"
+      confirm: "Are you sure?"
+      logout: "Log out"
 
   devise:
     registrations:
@@ -55,10 +53,11 @@ en:
       sessions:
         new:
           header: "Log in"
+      create:
+        hello: "Hello, %{name}"
+
       shared:
         links:
-          sign_in: "Sign in"
-          log_in: "Log in"
           forgot_your_password: "Forgot your password?"
           confirmation_instructions: "Didn't receive confirmation instructions"
           unlock_instructions: "Didn't receive unlock instructions"
@@ -116,6 +115,8 @@ en:
       admin_panel: "TestGuru Admin Panel"
       welcome: "Welcome %{name}!"
       confirm: "Are you sure?"
+      logout: "log out"
+      testguru: "TestGuru"
 
   tests_mailer:
     completed_test:
