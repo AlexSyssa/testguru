@@ -1,0 +1,13 @@
+<div class="row justify-content-center mt-3">
+  <div class="col-8 col—md—4">
+    <h1> <%= t('.header') %> </h1><br>
+     <table class="table table-bordered border-secondary">
+       <tr class="table-primary table-bordered border-secondary">
+       <th><%= t('.question')%> </th>
+       <th><%= t('.url')%></th>
+       <th><%= t('.user')%></th>
+     </tr>
+     <%= render @gists %>
+    </table>
+  </div>
+</div>

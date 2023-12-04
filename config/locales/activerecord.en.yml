@@ -2,10 +2,10 @@ en:
   activerecord:
     models:
       test: "Test"
-      question: 'Question'
-      answer: 'Answer'
-      user: 'User'
-      category: 'Category'
+      question: "Question"
+      answer: "Answer"
+      user: "User"
+      category: "Category"
 
     attributes:
       test:
@@ -18,7 +18,6 @@ en:
         password: "password"
         password_confirmation: "Password confirmation"
         remember_me: "Remember me"
-
 
     errors:
       messages:

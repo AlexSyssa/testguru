@@ -27,13 +27,10 @@ ru:
       answer:
         body: "Текст ответа"
         correct: "Правильный ответ"
-      # user:
-      #   first_name: "Имя"
-      #   last_name: "Фамилия"
-      #   email: "Email"
-      #   password: "пароль"
-      #   password_confirmation: "Подтверждение пароля"
-      #   remember_me: "Запомнить"
+
+  services:
+    description: "Вопрос о %{test} от ТестГуру"
+    test_guru_question: "тест-гуру-вопрос"
 
   shared:
     errors:
@@ -78,8 +75,18 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+    gist:
+      success: "Gist успешно сохранен, ссылка %{link}"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
+    gists:
+      index:
+        header: "Gists"
+        question: "Вопрос"
+        url: "Адрес"
+        user: "Пользователь"
+
     tests:
       create:
         success: "Тест был успешно создан."
