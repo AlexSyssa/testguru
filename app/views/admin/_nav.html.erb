@@ -4,7 +4,7 @@
   <span class="nav justify-content-end">
     <%= t('.welcome', name: current_user.first_name) %>  |
     <%= link_to t('.testguru'), admin_tests_path, class: 'nav-link active' %>
-    <%= button_to t('.logout'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
+    <%= link_to t('.logout'), destroy_user_session_path, method: :delete, data: { confirm: t('.confirm')} %>
   </span>
   </div>
   <span>
