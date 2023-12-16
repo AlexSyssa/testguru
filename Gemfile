@@ -25,7 +25,6 @@ gem 'jbuilder', '~> 2.7'
 #gem 'bcrypt', '~> 3.1.7'
 
 #AUTH
-
 gem 'devise', '~> 4.0'
 
 #NETWORKING
@@ -42,9 +41,7 @@ gem 'pry-rails', '~> 0.3.4'
 
 #UI
 gem 'jquery-rails'
-
 gem 'bootstrap', '~> 5.0.0.beta1'
-
 gem 'octicons_helper'
 
 # Use Active Storage variant
