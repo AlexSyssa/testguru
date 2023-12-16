@@ -10,6 +10,8 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+require("../utilities/sorting")
+
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
@@ -18,5 +20,3 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
-require("../utilities/sorting")
