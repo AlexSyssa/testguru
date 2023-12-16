@@ -9,6 +9,7 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
+
 require("../utilities/sorting")
 
 import Rails from "@rails/ujs"
