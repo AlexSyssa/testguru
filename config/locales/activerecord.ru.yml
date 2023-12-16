@@ -2,10 +2,10 @@ ru:
   activerecord:
     models:
       test: "Тест"
-      question: 'Вопрос'
-      answer: 'Ответ'
-      user: 'Пользователь'
-      category: 'Категория'
+      question: "Вопрос"
+      answer: "Ответ"
+      user: "Пользователь"
+      category: "Категория"
 
     attributes:
       test:

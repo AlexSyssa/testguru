@@ -27,13 +27,9 @@ en:
       answer:
         body: "Body"
         correct: "Correct"
-      # user:
-      #   first_name: "Имя"
-      #   last_name: "Фамилия"
-      #   email: "Email"
-      #   password: "пароль"
-      #   password_confirmation: "Подтверждение пароля"
-      #   remember_me: "Запомнить"
+  services:
+    description: "A question about %{test} from TestGuru"
+    test_guru_question: "test-guru-question"
 
   shared:
     errors:
@@ -76,8 +72,18 @@ en:
   test_passages:
     result:
       header: "Test %{title} was succesfully completed!"
+    gist:
+      succes: "Gist was succesfully created, link: %{link}!"
+      failure: "An error occured while saving gist"
 
   admin:
+    gists:
+      index:
+        header: "Gist"
+        question: "Question"
+        url: "URL"
+        user: "User"
+
     tests:
       create:
         success: "Test was successfully created."
