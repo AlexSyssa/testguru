@@ -40,6 +40,10 @@ gem 'rails-i18n', '~> 6'
 gem 'pry-rails', '~> 0.3.4'
 
 #UI
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 8c9dcb2... js2
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'octicons_helper'
