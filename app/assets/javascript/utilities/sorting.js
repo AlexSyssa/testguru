@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> parent of 909d124... two
 document.addEventListener('turbolinks:load', function() {
   var control = document.querySelector('.sort-by-title')
 
@@ -9,12 +13,18 @@ document.addEventListener('turbolinks:load', function() {
 function sortRowsByTitle() {
   var table = document.querySelector('table')
 
+<<<<<<< HEAD
   // NodeList
   // https://developer.mozilla.org/ru/docs/Web/API/NodeList
   var rows = table.querySelectorAll('tr')
   var sortedRows = []
 
   // select all table rows except the first one which is the header
+=======
+  var rows = table.querySelectorAll('tr')
+  var sortedRows = []
+
+>>>>>>> parent of 909d124... two
   for (var i = 1; i < rows.lenght, i++) {
     sortedRows.push(rows[i])
   }
@@ -59,4 +69,7 @@ function compareRowsDesc(row1, row2) {
   if (testTitle1 > testTitle2) {return -1}
   return 0
 }
+<<<<<<< HEAD
 >>>>>>> parent of 8c9dcb2... js2
+=======
+>>>>>>> parent of 909d124... two
