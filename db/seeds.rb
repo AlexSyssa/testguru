@@ -2,9 +2,9 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
 users = User.create!([
-  { first_name: 'Alex', email: "Alx1@gmail.com", password: 'qweqwe1', password_confirmation: 'qweqwe1' },
-  { first_name: 'Ann', email: "n@gmail.com", password: 'asdasd2', password_confirmation: 'asdasd2' },
-  { first_name: 'Bill', email: "Bll1@gmail.com", password: 'zxczxc3', password_confirmation: 'zxczxc3' }
+  { first_name: 'One', email: "One@gmail1.com", password: 'qweqwe1', password_confirmation: 'qweqwe1' },
+  { first_name: 'Two', email: "Two@gmail1.com", password: 'asdasd2', password_confirmation: 'asdasd2' },
+  { first_name: 'Three', email: "Three@gmail1.com", password: 'zxczxc3', password_confirmation: 'zxczxc3' }
 ])
 
 categories = Category.create!([
