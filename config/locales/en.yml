@@ -20,6 +20,7 @@ en:
       test:
         title: "Title"
         level: "Level"
+        public: "Public"
         category_id: "Category"
         author_id: "Author"
       question:
@@ -64,6 +65,7 @@ en:
       table:
         title: "Title"
         level: "Lavel"
+        public: "Public"
         question: "Question"
         action: "Action"
     test:
@@ -101,6 +103,7 @@ en:
         table:
           title: "Title"
           level: "Lavel"
+          public: "Public"
           question: "Question"
           action: "Action"
       new:
@@ -110,13 +113,14 @@ en:
         header: "Edit test:"
         back: "Back"
       show:
-        header: "Название:"
-        level: "Уровень"
-        question: "Вопросы"
-        new_question: "Новый вопрос"
-        edit: "Редактирование"
-        back: "Назад"
-        delete: "Удалить"
+        header: "Title:"
+        level: "lavel"
+        public: "Public"
+        question: "Question"
+        new_question: "New question"
+        edit: "Edit"
+        back: "Back"
+        delete: "Delete"
     nav:
       admin_panel: "TestGuru Admin Panel"
       welcome: "Welcome %{name}!"

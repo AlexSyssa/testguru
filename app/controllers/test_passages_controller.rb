@@ -10,13 +10,6 @@ class TestPassagesController < ApplicationController
   def result
   end
 
-  def check_box
-    if params[:answer_ids].nil?
-      flash.now.alert = "Вам необходимо выбрать ответ"
-      render :show
-    end
-  end
-
   def update
     @test_passage.accept!(params[:answer_ids])
 
@@ -34,4 +27,10 @@ class TestPassagesController < ApplicationController
     @test_passage = TestPassage.find(params[:id])
   end
 
+  def check_box
+    if params[:answer_ids].nil?
+      flash.now.alert = "Вам необходимо выбрать ответ"
+      render :show
+    end
+  end
 end

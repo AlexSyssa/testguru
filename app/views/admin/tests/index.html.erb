@@ -11,8 +11,9 @@
         <%= octicon 'arrow-down', class: 'text-success hide' %>
         </th>
         <th><%= t('.table.level')%></th>
+        <th><%= t('.table.public')%></th>
         <th><%= t('.table.question')%></th>
-        <th colspan ="3"> <%= t('.table.action')%> </th>
+        <th colspan ="4"> <%= t('.table.action')%> </th>
       </tr>
       <%= render @tests %>
     </table>
