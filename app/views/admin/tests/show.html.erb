@@ -1,11 +1,13 @@
-<h1><p>
-  <strong> <%= t('.header') %></strong>
-  <%= @test.title %>
+<h2><%= t('.header') %>
+  <%= @test.title %></h2>
+<h3><p>
+  <%= t('.level')%>
+  <%= @test.level %>
 </p>
 <p>
-  <strong><%= t('.level')%></strong>
-  <%= @test.level %>
-</p></h1>
+  <%= t('.public')%>
+  <%= @test.public %>
+</p></h3>
 
 <h3> <%= t('.question') %> </h3>
 
@@ -17,5 +19,5 @@
 
 <p><%= link_to t('.edit'), edit_admin_test_path(@test) %>
    <%= link_to t('.back'), admin_tests_path %>
-   <%= link_to t('.delete'), admin_test_path(@test), method: :delete, data: {confirm: 'Are you sure?'}%>
+   <%= button_to t('.delete'), admin_test_path(@test), method: :delete, data: {confirm: 'Are you sure?'}%>
 </p>

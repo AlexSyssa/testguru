@@ -20,6 +20,7 @@ ru:
       test:
         title: "Название"
         level: "Уровень"
+        public: "Опубликовать"
         category_id: "Категория"
         author_id: "Автор"
       question:
@@ -67,6 +68,7 @@ ru:
       table:
         title: "Название"
         level: "Уровень"
+        public: "Опубликовать"
         question: "Вопросы"
         action: "Действие"
     test:
@@ -104,6 +106,7 @@ ru:
         table:
           title: "Название"
           level: "Уровень"
+          public: "Опубликовать"
           question: "Вопросы"
           action: "Действие"
       new:
@@ -115,6 +118,7 @@ ru:
       show:
         header: "Название:"
         level: "Уровень"
+        public: "Опубликовать"
         question: "Вопросы"
         new_question: "Новый вопрос"
         edit: "Редактирование"

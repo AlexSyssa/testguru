@@ -34,6 +34,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def destroy
+    @test.test_passages.delete_all
     @test.destroy
     redirect_to admin_tests_path, notice: t('.destroy')
   end
@@ -45,6 +46,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :author_id)
+    params.require(:test).permit(:title, :level, :category_id, :author_id, :public)
   end
 end

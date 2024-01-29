@@ -11,7 +11,7 @@
                                   :body,
                                   include_hidden: false do |b| %>
   <p>
-    <%= b.check_box id: "answer_id_#{b.object.id}" %>
+    <%= b.check_box id: "answer_id_#{b.object.id}", autofocus: true, placeholder: 'Enter answer' %>
     <%= b.label for: "answer_id_#{b.object.id}"%>
   </p>
   <% end %>
