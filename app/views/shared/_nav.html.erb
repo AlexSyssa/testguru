@@ -5,6 +5,7 @@
     <span class="nav justify-content-end">
       <% if user_signed_in? %>
         <%= t('.welcome', name: current_user.first_name) %> |
+        <%= link_to "My_Badges", badges_path %>||
         <%= button_to t('.logout'), destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?'} %>
       <% else %>
         <%= link_to "Log in", new_session_path(resource_name) %> |

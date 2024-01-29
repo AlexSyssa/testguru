@@ -1,23 +1,27 @@
-<h2><%= t('.header') %>
-  <%= @test.title %></h2>
-<h3><p>
-  <%= t('.level')%>
-  <%= @test.level %>
-</p>
-<p>
-  <%= t('.public')%>
-  <%= @test.public %>
-</p></h3>
+<div class="row justify-content-center mt-3">
+  <div class="col-8 col—md—4">
+    <h2><%= t('.header') %>
+      <%= @test.title %></h2>
 
-<h3> <%= t('.question') %> </h3>
+      <h4><p>
+        <%= t('.level')%>
+        <%= @test.level %>
+      </p>
+      <p>
+        <%= t('.public')%>
+        <%= @test.public ? 'Да' : 'Нет' %>
+      </p>
 
-<%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
+        <%= t('.question') %> </h4>
+        <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 
-<ol>
-  <%= render @test.questions %>
-</ol>
+      <ol>
+        <%= render @test.questions %>
+      </ol>
 
-<p><%= link_to t('.edit'), edit_admin_test_path(@test) %>
-   <%= link_to t('.back'), admin_tests_path %>
-   <%= button_to t('.delete'), admin_test_path(@test), method: :delete, data: {confirm: 'Are you sure?'}%>
-</p>
+      <p><%= link_to t('.edit'), edit_admin_test_path(@test) %>
+        <%= link_to t('.back'), admin_tests_path %>
+        <%= link_to t('.delete'), admin_test_path(@test), method: :delete, data: {confirm: 'Are you sure?'}%>
+      </p>
+    </div>
+</div>

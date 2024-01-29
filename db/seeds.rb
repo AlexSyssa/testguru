@@ -1,10 +1,14 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
+badges = Badge.create!([
+  { title: 'BigGeek',  image: 'one.jpeg', rule: 'Данная награда выдается в случае успешного прохождения теста с первой попытки' },
+])
+
 users = User.create!([
-  { first_name: 'One', email: "One@gmail1.com", password: 'qweqwe1', password_confirmation: 'qweqwe1' },
-  { first_name: 'Two', email: "Two@gmail1.com", password: 'asdasd2', password_confirmation: 'asdasd2' },
-  { first_name: 'Three', email: "Three@gmail1.com", password: 'zxczxc3', password_confirmation: 'zxczxc3' }
+  { first_name: 'One1', email: "One1@gmail1.com", password: 'qweqwe1', password_confirmation: 'qweqwe1' },
+  { first_name: 'Two2', email: "Two2@gmail1.com", password: 'asdasd2', password_confirmation: 'asdasd2' },
+  { first_name: 'Three3', email: "Three3@gmail1.com", password: 'zxczxc3', password_confirmation: 'zxczxc3' }
 ])
 
 categories = Category.create!([

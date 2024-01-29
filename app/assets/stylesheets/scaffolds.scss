@@ -1,5 +1,5 @@
 body {
-  background-color: #E6E6FA;
+  background-color: #fff;
   color: #333;
   margin: 33px; }
 
@@ -31,12 +31,10 @@ td {
 
 div.field,
 div.actions {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 #notice {
-  color: green;
-  padding-top: 80px;
-}
+  color: green; }
 
 .field_with_errors {
   padding: 2px;
@@ -62,3 +60,6 @@ div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square; }
+
+label {
+  display: block; }

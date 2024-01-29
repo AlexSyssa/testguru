@@ -15,6 +15,9 @@ ru:
       user:
         update: "Войти"
         create: "Войти"
+      badge:
+        create: "Создать награду"
+        update: "Обновить награду"
 
     label:
       test:
@@ -28,6 +31,10 @@ ru:
       answer:
         body: "Текст ответа"
         correct: "Правильный ответ"
+      badge:
+        title: "Название"
+        image: "Изображение"
+        rule: "Правило"
 
   services:
     description: "Вопрос о %{test} от ТестГуру"
@@ -68,7 +75,7 @@ ru:
       table:
         title: "Название"
         level: "Уровень"
-        public: "Опубликовать"
+        public: "Публикуемый:"
         question: "Вопросы"
         action: "Действие"
     test:
@@ -118,7 +125,7 @@ ru:
       show:
         header: "Название:"
         level: "Уровень"
-        public: "Опубликовать"
+        public: "Публикуемый:"
         question: "Вопросы"
         new_question: "Новый вопрос"
         edit: "Редактирование"
