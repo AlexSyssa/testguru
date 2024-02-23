@@ -6,6 +6,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :next_question
+  before_update :passage_result!
 
   def successful?
     correct_percent >= SUCCESSFUL_RESULT
@@ -52,5 +53,9 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct
+  end
+
+  def passage_result!
+    self.success = self.successful? if self.completed?
   end
 end
