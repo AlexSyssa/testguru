@@ -9,11 +9,11 @@ badges = Badge.create!([
   { title: 'Strike Level',  image: 'two.jpeg', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенного уровня',
     method: 'rule_all_level?', option: 2 },
   { title: 'Strike Category',  image: 'tree.png', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенной категории',
-    method: 'rule_all_category?', option: 'junior!' },
+    method: 'rule_all_category?', option: 13 },
   { title: 'Strike Category',  image: 'tree.png', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенной категории',
-    method: 'rule_all_category?', option: 'middle!'},
+    method: 'rule_all_category?', option: 14 },
   { title: 'Strike Category',  image: 'tree.png', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенной категории',
-    method: 'rule_all_category?', option: 'senior!' },
+    method: 'rule_all_category?', option: 10 },
 ])
 
 users = User.create!([

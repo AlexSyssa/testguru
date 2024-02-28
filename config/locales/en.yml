@@ -23,7 +23,6 @@ en:
         public: "Public"
         category_id: "Category"
         author_id: "Author"
-        timer: "Timer"
       question:
         body: "Body"
       answer:
@@ -69,7 +68,6 @@ en:
         public: "Public"
         question: "Question"
         action: "Action"
-        timer: "Timer"
     test:
       start_button: "Start"
 
@@ -108,7 +106,6 @@ en:
           public: "Public"
           question: "Question"
           action: "Action"
-          timer: "Timer"
       new:
         header: "Create new Test"
         back: "Back"
@@ -120,7 +117,6 @@ en:
         level: "lavel"
         public: "Public"
         question: "Question"
-        timer: "Timer"
         new_question: "New question"
         edit: "Edit"
         back: "Back"
