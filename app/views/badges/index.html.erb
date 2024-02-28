@@ -1,0 +1,16 @@
+<div class="row justify-content-center mt-3">
+  <div class="col-8 col—md—4">
+    <h1>My Badges</h1>
+    <table class="table table-bordered border-secondary">
+      <tr class="table table-primary table-bordered border-secondary" >
+        <th class="sort-by-title pointer">Title
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+        </th>
+        <th>Rule</th>
+        <th>Image</th>
+      </tr>
+      <%= render @badges %>
+    </table>
+  </div>
+</div>

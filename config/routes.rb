@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :badges
   root to: 'tests#index'
 
   devise_for :users, path: :gurus,
@@ -22,5 +23,7 @@ Rails.application.routes.draw do
           resources :answers, shallow: true, except: :index
         end
       end
+
+      resources :badges
     end
   end

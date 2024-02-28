@@ -38,10 +38,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-<<<<<<< HEAD
+
 /.env
 /google-chrome-stable_current_amd64.deb
 google-chrome-stable_current_amd64.deb
-=======
+
 /.env/
->>>>>>> bf37b8503e07ec539bde92e2cfcd29166aa7cc24

@@ -1,10 +1,25 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
+badges = Badge.create!([
+  { title: 'BigGeek',  image: 'one.jpeg', rule: 'Данная награда выдается в случае успешного прохождения теста с первой попытки',
+    method: 'rule_first_try?'},
+  { title: 'Strike Level',  image: 'two.jpeg', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенного уровня',
+    method: 'rule_all_level?', option: 1 },
+  { title: 'Strike Level',  image: 'two.jpeg', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенного уровня',
+    method: 'rule_all_level?', option: 2 },
+  { title: 'Strike Category',  image: 'tree.png', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенной категории',
+    method: 'rule_all_category?', option: 'junior!' },
+  { title: 'Strike Category',  image: 'tree.png', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенной категории',
+    method: 'rule_all_category?', option: 'middle!'},
+  { title: 'Strike Category',  image: 'tree.png', rule: 'Данная награда выдается в случае успешного прохождения всех тестов определенной категории',
+    method: 'rule_all_category?', option: 'senior!' },
+])
+
 users = User.create!([
-  { first_name: 'One', email: "One@gmail1.com", password: 'qweqwe1', password_confirmation: 'qweqwe1' },
-  { first_name: 'Two', email: "Two@gmail1.com", password: 'asdasd2', password_confirmation: 'asdasd2' },
-  { first_name: 'Three', email: "Three@gmail1.com", password: 'zxczxc3', password_confirmation: 'zxczxc3' }
+  { first_name: 'One1', email: "One1@gmail1.com", password: 'qweqwe1', password_confirmation: 'qweqwe1' },
+  { first_name: 'Two2', email: "Two2@gmail1.com", password: 'asdasd2', password_confirmation: 'asdasd2' },
+  { first_name: 'Three3', email: "Three3@gmail1.com", password: 'zxczxc3', password_confirmation: 'zxczxc3' }
 ])
 
 categories = Category.create!([

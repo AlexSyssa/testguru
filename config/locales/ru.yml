@@ -15,6 +15,9 @@ ru:
       user:
         update: "Войти"
         create: "Войти"
+      badge:
+        create: "Создать награду"
+        update: "Обновить награду"
 
     label:
       test:
@@ -23,11 +26,16 @@ ru:
         public: "Опубликовать"
         category_id: "Категория"
         author_id: "Автор"
+        timer: "Таймер"
       question:
         body: "Текст вопроса"
       answer:
         body: "Текст ответа"
         correct: "Правильный ответ"
+      badge:
+        title: "Название"
+        image: "Изображение"
+        rule: "Правило"
 
   services:
     description: "Вопрос о %{test} от ТестГуру"
@@ -68,9 +76,10 @@ ru:
       table:
         title: "Название"
         level: "Уровень"
-        public: "Опубликовать"
+        public: "Публикуемый:"
         question: "Вопросы"
         action: "Действие"
+        timer: "Таймер"
     test:
       start_button: "Старт"
 
@@ -109,6 +118,7 @@ ru:
           public: "Опубликовать"
           question: "Вопросы"
           action: "Действие"
+          timer: "Таймер"
       new:
         header: "Создать новый тест"
         back: "Назад"
@@ -118,8 +128,9 @@ ru:
       show:
         header: "Название:"
         level: "Уровень"
-        public: "Опубликовать"
+        public: "Публикуемый:"
         question: "Вопросы"
+        timer: "Таймер"
         new_question: "Новый вопрос"
         edit: "Редактирование"
         back: "Назад"

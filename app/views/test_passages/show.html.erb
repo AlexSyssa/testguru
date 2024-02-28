@@ -16,6 +16,12 @@
   </p>
   <% end %>
 
+  <p>
+    Таймер: <%= content_tag :span, '', class: 'timer', data: {timer: @test_passage.time_test} %>
+  </p>
+
+
+
   <p><%= form.submit 'Next' %> </p>
 <% end %>
 
