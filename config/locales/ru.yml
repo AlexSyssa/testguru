@@ -26,7 +26,6 @@ ru:
         public: "Опубликовать"
         category_id: "Категория"
         author_id: "Автор"
-        timer: "Таймер"
       question:
         body: "Текст вопроса"
       answer:
@@ -79,7 +78,6 @@ ru:
         public: "Публикуемый:"
         question: "Вопросы"
         action: "Действие"
-        timer: "Таймер"
     test:
       start_button: "Старт"
 
@@ -118,7 +116,6 @@ ru:
           public: "Опубликовать"
           question: "Вопросы"
           action: "Действие"
-          timer: "Таймер"
       new:
         header: "Создать новый тест"
         back: "Назад"
@@ -130,7 +127,6 @@ ru:
         level: "Уровень"
         public: "Публикуемый:"
         question: "Вопросы"
-        timer: "Таймер"
         new_question: "Новый вопрос"
         edit: "Редактирование"
         back: "Назад"

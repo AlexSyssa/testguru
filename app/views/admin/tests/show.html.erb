@@ -12,11 +12,6 @@
         <%= @test.public ? 'Да' : 'Нет' %>
       </p>
 
-      <p>
-        <%= t('.timer')%>
-        <%= @test.timer %>
-      </p>
-
         <%= t('.question') %> </h4>
         <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 

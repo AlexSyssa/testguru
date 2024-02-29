@@ -26,16 +26,17 @@ class BadgeService
     return false if option_level.to_i != @test_passage.test.level
 
     tests = Test.where(level: option_level.to_i).pluck(:id)
-    completed = @test_passage.user.test_passages.success.where(test: tests).pluck(:test_id).uniq
+    completed = @test_passage.user.test_passages.where(success: true).where(test: tests).pluck(:test_id).uniq
 
     tests.count == completed.count
   end
 
   def rule_all_category?(rule_category)
-    return false if rule_category != @test_passage.test.category.title
+    #byebug
+    return false if rule_category.to_i != @test_passage.test.category_id
 
-    tests = Test.by_category(rule_category).pluck(:id)
-    completed = @test_passage.user.test_passages.success.where(test: tests).pluck(:test_id).uniq
+    tests = Test.where(category: rule_category.to_i).pluck(:id)
+    completed = @test_passage.user.test_passages.where(success: true).where(test: tests).pluck(:test_id).uniq
     tests.count == completed.count
   end
 end
