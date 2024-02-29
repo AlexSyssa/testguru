@@ -8,12 +8,14 @@ class TestPassage < ApplicationRecord
   before_validation :next_question
   before_update :passage_result!
 
+  scope :success, -> {where(success: true)}
+
   def successful?
     correct_percent >= SUCCESSFUL_RESULT
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_over?
   end
 
   def complete_test
@@ -28,8 +30,15 @@ class TestPassage < ApplicationRecord
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
-
     save!
+  end
+
+  def time_test
+    (test.timer * 60) - (Time.now.to_i - created_at.to_i)
+  end
+
+  def time_over?
+    time_test <= 0 if test.timer
   end
 
   def current_question_number

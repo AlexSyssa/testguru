@@ -26,5 +26,10 @@
   <%= form.check_box :public %>
 </p>
 
+<p>
+  <%= form.label :timer %> <br>
+  <%= form.number_field :timer, id: :test_timer %> min.
+</p>
+
 <p><%= form.submit %></p>
 <% end %>
