@@ -2,6 +2,7 @@
   <td><%= test.title %></td>
   <td><%= test_level(test) %></td>
   <td><%= test.public ? 'Да' : 'Нет' %></td>
+  <td><%= test.timer %></td>
   <td align = "center"><%= test.questions.size %></td>
   <td><%= link_to t('.show'), admin_test_path(test) %></td>
   <td><%= link_to t('.edit'), edit_admin_test_path(test) %></td>
